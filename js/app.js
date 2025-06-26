@@ -14,10 +14,20 @@ guessCount++
 
 //  2) End the loop when the user's guess matches the random number
 
-while (guess !== randomNumber) {
+while (guessCount < 10) {
   guess = parseInt(prompt('Incorrect. Please guess again:'))
+  if (guess === randomNumber) {
+    break
+  }
   guessCount++
 }
 
+const correctGuess = `<h1>You guessed the number! It was ${randomNumber}.</h1><h2>It only took you ${guessCount} guesses.</h2>`
+const incorrectGuess = `<h1>Womp Womp! You ran out of guesses.</h1>`
+
 //  3) Display a message letting the user know they guessed the number
-main.innerHTML = `<h1>You guessed the number! It was ${randomNumber}.</h1><h2>It only took you ${guessCount} guesses.</h2>`
+if (guess === randomNumber) {
+  main.innerHTML = correctGuess
+} else {
+  main.innerHTML = incorrectGuess
+}
