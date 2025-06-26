@@ -23,7 +23,7 @@ while (guessCount < 10) {
 }
 
 const correctGuess = `<h1>You guessed the number! It was ${randomNumber}.</h1><h2>It only took you ${guessCount} guesses.</h2>`
-const incorrectGuess = `<h1>Womp Womp! You ran out of guesses.</h1>`
+const incorrectGuess = `<h1>Womp Womp! You ran out of guesses. It was ${randomNumber}.</h1>`
 
 //  3) Display a message letting the user know they guessed the number
 if (guess === randomNumber) {
