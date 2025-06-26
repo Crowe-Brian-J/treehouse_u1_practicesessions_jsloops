@@ -2,6 +2,7 @@ const getRandomNumber = (upper) => Math.floor(Math.random() * upper) + 1
 
 const main = document.querySelector('main')
 const randomNumber = getRandomNumber(10)
+let guess = ''
 let message = ''
 
 // TODO: Use a loop to create a number guessing game
@@ -12,9 +13,7 @@ let message = ''
 //Convert while to for loop
 for (let i = 1; i <= 10; i++) {
   if (i === 1) {
-    let guess = prompt(
-      'I am thinking of a number between 1 and 10. What is it?'
-    )
+    guess = prompt('I am thinking of a number between 1 and 10. What is it?')
   } else {
     guess = prompt('Incorrect. Please guess again.')
   }
